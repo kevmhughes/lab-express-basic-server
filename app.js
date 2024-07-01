@@ -25,11 +25,11 @@ app.use(morgan("dev"));
 // ROUTES
 // Start defining your routes here:
 app.get("/", (req, res) => {
-    res.sendFile(__dirname + "/home.html")
+    res.sendFile(__dirname + "/views/home.html")
 })
 
 app.get("/blog", (req, res) => {
-    res.sendFile(__dirname + "/blog.html")
+    res.sendFile(__dirname + "/views/blog.html")
 })
 
 
@@ -42,7 +42,7 @@ app.get("/api/articles", (req, res) => {
 })
 
 app.get("*", (req, res) => {
-    res.sendFile(__dirname + "/not-found.html")
+    res.sendFile(__dirname + "/views/not-found.html")
 })
 
 
